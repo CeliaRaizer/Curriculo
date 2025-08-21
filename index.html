@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Célia Raizer - Currículo</title>
-    <meta name="author" content="Célia Raizer"> <!--é uma meta tag do HTML, usada para fornecer metadados sobre a página.-->
+    <meta name="author" content="Célia Raizer - Desenvolvedora Front-end Júnior, com experiência em HTML, CSS, Java, C, MySQL, PostgreSQL. "> <!--é uma meta tag do HTML, usada para fornecer metadados sobre a página.-->
 
     <!--favicon (imagem pequena no title da pagina)-->
     <link rel="icon" href="assets/favicon.ico" type="image/png">
 
     <meta property="og:title" content="Célia Raizer - Currículo Online"/>
-    <meta property="og:descrition" content="Currículo profissional de Desenvolvedor Front-end, com experiência, habilidade e projetos" />
-    <meta property="og:url" content="" />
+    <meta property="og:description" content="Currículo profissional de Desenvolvedor Front-end, com experiência, habilidade e projetos" />
+    <meta property="og:url" content="https://CeliaRaizer.github.io/seu-repositorio/" />
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/179221023?v=4" />
 
     <!-- é uma meta tag usada para dar instruções aos robôs de 
@@ -30,10 +30,11 @@
             --bg: #f6f8fb; /* Cor de fundo da página */
             --card: #ffffff; /* Cor de fundo para cartões/caixas */
             --muted: #6b7280; /* Cor para textos secundários */
-            --accent: #0ea5a4; /* Cor principal de destaque */
-            --accent-2: #0b7285; /* Segunda cor de destaque  */
+            --accent: #e998db; /* Cor principal de destaque */
+            --accent-2: #e634c8; /* Segunda cor de destaque  */
             --text: #0f172a; /* Cor principal do texto  */
             --gap: 1rem; /* Espaçamento padrão entre elementos */
+            --sidebar-bg: linear-gradient(180deg, #e998db, #e634c8); /* Gradiente rosa → pink */
         }
 
         * {
@@ -65,7 +66,7 @@
 
 
        .sidebar {
-            background: linear-gradient(180deg, var(--accent), var(--accent-2)); /*Fundo */
+            background: var(--sidebar-bg); /* usa a variável nova */
             color: white; /* Cor do texto e ícones da sidebar */
             padding: 2rem; /* Espaçamento interno ao redor do conteúdo (~32px) */
             display: flex; /* Transforma a sidebar em container flexível */
@@ -101,6 +102,16 @@
             gap: 0.3rem; /*Espaço entre os itens dentro do link  */
             color: rgba(255, 255, 255, 0.95);/* Cor do texto do link */
             text-decoration: none;  /*Remove o sublinhado padrão dos links */
+        }
+
+        .contact a:hover {
+            color: #cb06ab;
+            transform: scale(1.05); /* cresce levemente */
+        }
+
+        .social a:hover {
+            color: #cb06ab;
+            font-size: 2rem;
         }
 
         .skills { 
@@ -174,6 +185,16 @@
             border-radius: 8px;
         }
 
+        a {
+            color: #cf98b3; /* cor azul */
+            text-decoration: none; /* remove sublinhado */
+        }
+
+        /* Links quando o mouse passa por cima */
+        a:hover {
+            color: #ff1493; /* cor rosa */
+        }
+
         footer {
             font-size: 0.85rem;
             color: var(--muted);
@@ -210,14 +231,22 @@
         }
 
         .skills {
-            flex-direction: column;
+            flex-wrap: wrap; 
+            flex-direction: row; 
         }
 
         .skill {
-            flex: 1 1 auto;
+            flex: 1 1 45%; 
+            min-width: 140px; 
         }
     }
 
+    .Hobbies {
+        color: #0c0c0c;
+        margin-bottom: 0.6rem;
+        font-size: 1.5rem;
+    }
+    
     </style>
 </head>
 
@@ -275,7 +304,7 @@
     <section class="section">
         <h2 id="summary-title">Resumo</h2>
         <div class="summary">
-            Desenvolvedora front‑end focado em construir interfaces acessíveis e responsivas...
+            Desenvolvedora front‑end focada em construir interfaces acessíveis e responsivas...
         </div>
     </section> 
 
@@ -292,10 +321,18 @@
         <h2 id="projects-title">Projetos Selecionados</h2>
         <div class="projects">
             <div class="project">
-                <strong>App de Tarefas (React)</strong>
-                <div class="muted">Lista de tarefas com filtro, persistência local e testes unitários.</div>
+                <strong>Sistema de Farmácia (Java + MySQL)</strong>
+            <div class="muted">Aplicação desktop para gerenciamento de medicamentos, estoque e vendas. 
+            Inclui tela de login para gerente e funcionários, cadastro de produtos e integração com banco de dados MySQL.</div>
+            <a href="https://github.com/CeliaRaizer/Farmacia" target="_blank"> Ver no GitHub </a>
             </div>
-            <!-- Mais projetos -->
+            <div class="project">
+        <strong>Desenvolvimento Web I (HTML)</strong>
+        <div class="muted">
+            Trabalhos acadêmico desenvolvidos na disciplina de desenvolvimento web I com HTML.
+            <a href="https://github.com/CeliaRaizer/Desenvolvimento-Web-I" target="_blank">Ver no GitHub</a>
+        </div>
+    </div>
         </div>
     </section>
 
@@ -305,6 +342,13 @@
       <strong>Bacharelado em Ciência da Computação — Instituto Federal Catarinense</strong>
       <div class="muted">2024 — 2027</div>
     </div>
+    </section>
+
+    <section class="section">
+        <h2 class="Hobbies">Hobbies</h2>
+        <div>
+            <p>🏋️Academia ⚽Assitir Futebol (Corinthians)</p>
+        </div>
     </section>
 
     <footer>
