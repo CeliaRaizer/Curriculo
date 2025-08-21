@@ -6,107 +6,96 @@
     <title>Célia Raizer - Currículo</title>
     <meta name="author" content="Célia Raizer - Desenvolvedora Front-end Júnior, com experiência em HTML, CSS, Java, C, MySQL, PostgreSQL. "> <!--é uma meta tag do HTML, usada para fornecer metadados sobre a página.-->
 
-    <!--favicon (imagem pequena no title da pagina)-->
     <link rel="icon" href="assets/favicon.ico" type="image/png">
 
     <meta property="og:title" content="Célia Raizer - Currículo Online"/>
     <meta property="og:description" content="Currículo profissional de Desenvolvedor Front-end, com experiência, habilidade e projetos" />
     <meta property="og:url" content="https://CeliaRaizer.github.io/seu-repositorio/" />
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/179221023?v=4" />
-
-    <!-- é uma meta tag usada para dar instruções aos robôs de 
-     mecanismos de busca (Google, Bing, etc.)
-    sobre como eles devem tratar sua página. -->
     <meta name="robots" content="index, follow" />
 
-    <!-- Fonte do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
 
     <style>
         :root{
-            --bg: #f6f8fb; /* Cor de fundo da página */
-            --card: #ffffff; /* Cor de fundo para cartões/caixas */
-            --muted: #6b7280; /* Cor para textos secundários */
-            --accent: #e998db; /* Cor principal de destaque */
-            --accent-2: #e634c8; /* Segunda cor de destaque  */
-            --text: #0f172a; /* Cor principal do texto  */
-            --gap: 1rem; /* Espaçamento padrão entre elementos */
-            --sidebar-bg: linear-gradient(180deg, #e998db, #e634c8); /* Gradiente rosa → pink */
+            --bg: #f6f8fb; 
+            --card: #ffffff; 
+            --muted: #6b7280; 
+            --accent: #e998db; 
+            --accent-2: #e634c8; 
+            --text: #0f172a; 
+            --gap: 1rem; 
+            --sidebar-bg: linear-gradient(180deg, #e998db, #e634c8);
         }
 
         * {
-            box-sizing: border-box; /* Faz a largura e altura incluir padding e borda */
-            margin: 0;              /* Remove a margem padrão dos navegadores */
-            padding: 0;             /* Remove o espaçamento interno padrão */
+            box-sizing: border-box; 
+            margin: 0;              
+            padding: 0;             
         }
 
         body {
-            font-family: Inter, system-ui, sans-serif; /* Define a fonte principal da página */
-            background: var(--bg); /* Cor de fundo da página, usando a variável --bg */
-            color: var(--text); /* Cor do texto padrão, usando a variável --text */
-            padding: 1rem; /* Espaçamento interno nas bordas da página (~16px) */
-            display: flex; /* Transforma o body em um container flexbox */
-            justify-content: center; /* Alinha o conteúdo horizontalmente no centro */
+            font-family: Inter, system-ui, sans-serif; 
+            background: var(--bg); 
+            color: var(--text); 
+            padding: 1rem; 
+            display: flex; 
+            justify-content: center; 
         }
 
         .container {
-            max-width: 1200px; /* Largura máxima do container*/
-            background: var(--card); /* Cor de fundo do container */
-            border-radius: 12px; /* Bordas arredondadas do container */
-            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08); /* Sombra */
-            display: grid; /* Usa CSS Grid para organizar os elementos dentro do container */
-            grid-template-columns: 1fr 2fr; /* Define duas colunas: 
-            - primeira coluna ocupa 1 parte do espaço 
-            - segunda coluna ocupa 2 partes (2x maior que a primeira) */
-            overflow: hidden; /* Evita que o conteúdo “vaze” do container */
+            max-width: 1200px; 
+            background: var(--card); 
+            border-radius: 12px; 
+            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08); 
+            display: grid; 
+            grid-template-columns: 1fr 2fr; 
+            overflow: hidden; 
         }
 
 
        .sidebar {
-            background: var(--sidebar-bg); /* usa a variável nova */
-            color: white; /* Cor do texto e ícones da sidebar */
-            padding: 2rem; /* Espaçamento interno ao redor do conteúdo (~32px) */
-            display: flex; /* Transforma a sidebar em container flexível */
-            flex-direction: column; /* Organiza os elementos da sidebar em coluna (de cima para baixo) */
-            gap: var(--gap); /* Espaçamento padrão entre os elementos da sidebar (1rem) */
+            background: var(--sidebar-bg); 
+            color: white; 
+            padding: 2rem; 
+            display: flex; 
+            flex-direction: column; 
+            gap: var(--gap);
         }
 
 
         .sidebar > div:first-child {
-            display: flex; /* Transforma este div em um container flexível */
-            /* flex-direction: column; */ /* faria os elementos ficarem empilhados verticalmente */
-            align-items: center; /* Centraliza horizontalmente os itens dentro do div */
-            gap: var(--gap); /* Espaçamento entre os elementos (usando a variável --gap, 1rem) */
+            display: flex; 
+            align-items: center; 
+            gap: var(--gap); 
         }
 
         .photo {
-            width: 96px; /* Largura da imagem */
-            height: 96px; /* Altura da imagem */
-            border-radius: 12px; /* Bordas arredondadas da foto */
-            overflow: hidden; /*Garante que qualquer parte da imagem que ultrapasse os limites seja cortada */
-            border: 3px solid rgba(255, 255, 255, 0.15); /* Borda ao redor da foto para destaque */
+            width: 96px; 
+            height: 96px; 
+            border-radius: 12px; 
+            overflow: hidden;
+            border: 3px solid rgba(255, 255, 255, 0.15); 
         }
 
         .photo img {
-            width: 100%; /* Faz a imagem ocupar 100% da largura do container .photo */
-            height: 100%; /* Faz a imagem ocupar 100% da altura do container .photo */
-            object-fit: cover; /* Faz a imagem preencher o container cortando partes que ultrapassam,mantendo a proporção sem distorcer */
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
         }
 
         .contact a {
-            display: inline-flex; /* Transforma o link em um container flexível*/
-            align-items: center; /*Centraliza verticalmente os elementos dentro do link */
-            gap: 0.3rem; /*Espaço entre os itens dentro do link  */
-            color: rgba(255, 255, 255, 0.95);/* Cor do texto do link */
-            text-decoration: none;  /*Remove o sublinhado padrão dos links */
+            display: inline-flex; 
+            align-items: center; 
+            gap: 0.3rem; 
+            color: rgba(255, 255, 255, 0.95);
+            text-decoration: none;  
         }
 
         .contact a:hover {
             color: #cb06ab;
-            transform: scale(1.05); /* cresce levemente */
+            transform: scale(1.05); 
         }
 
         .social a:hover {
@@ -115,13 +104,13 @@
         }
 
         .skills { 
-            display: flex; /*container flexivel*/
-            flex-wrap: wrap; /*quebra linha*/
-            gap: 0.5rem; /*Cria um espaço (margem interna) entre os itens flexíveis.*/
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 0.5rem;
         }
 
         .skill {
-            flex: 1 1 120px; /* flex-grow, flex-shrink, base width (define que cada habilidade ocupa pelo menos 120px)*/
+            flex: 1 1 120px; 
             background: #f3f6f8;
             padding: 0.5rem;
             border-radius: 8px;
@@ -134,7 +123,7 @@
             background: #e6eef0;
             border-radius: 999px;
             margin-top: 0.5rem;
-            overflow: hidden; /*Garante que nada dentro da barra (como o <span> que vai representar o preenchimento) ultrapasse os limites arredondados.*/
+            overflow: hidden; 
         }
 
         .progress > span {
@@ -144,11 +133,11 @@
         }
 
         main{
-            padding: 2rem; /*espaço interno*/
+            padding: 2rem;
         }
 
         .section{
-            margin-bottom: 1.25rem; /*adiciona espaço abaixo do elemento*/
+            margin-bottom: 1.25rem; 
         } 
 
         .section h2{
@@ -157,8 +146,8 @@
         }
 
         .job{
-            border-left: 3px solid var(--accent); /*borda a esquerda do texto*/
-            padding: 0.6rem 0 0.6rem 0.8rem; /*espaco entre borda e texto*/
+            border-left: 3px solid var(--accent); 
+            padding: 0.6rem 0 0.6rem 0.8rem; 
             margin-bottom: 0.6rem;
         }
 
@@ -174,8 +163,8 @@
 
         .projects{
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /*grid responsivo que se adapta ao tamanho da tela*/
-            gap: 0.75rem; /*espaçamento*/
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+            gap: 0.75rem; 
         }
 
         .project {
@@ -186,13 +175,12 @@
         }
 
         a {
-            color: #cf98b3; /* cor azul */
-            text-decoration: none; /* remove sublinhado */
+            color: #cf98b3;
+            text-decoration: none; 
         }
 
-        /* Links quando o mouse passa por cima */
         a:hover {
-            color: #ff1493; /* cor rosa */
+            color: #ff1493; 
         }
 
         footer {
@@ -201,7 +189,7 @@
             margin-top: 1rem;
         }
 
-    @media (max-width: 800px) { /*layout responsivo, para ajustar em varias telas*/
+    @media (max-width: 800px) { 
         .container {
             grid-template-columns: 1fr;
         }
@@ -217,7 +205,7 @@
         }
     }
 
-    @media (max-width: 500px) { /*layout responsivo, para ajustar em varias telas*/
+    @media (max-width: 500px) { 
         body {
             padding: 0.5rem;
         }
@@ -300,7 +288,6 @@
   </aside>
 
   <main>
-    <!-- Resumo, experiência, projetos, formação, contato -->
     <section class="section">
         <h2 id="summary-title">Resumo</h2>
         <div class="summary">
