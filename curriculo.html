@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Célia Raizer - Currículo</title>
+    <meta name="author" content="Célia Raizer"> <!--é uma meta tag do HTML, usada para fornecer metadados sobre a página.-->
+
+    <!--favicon (imagem pequena no title da pagina)-->
+    <link rel="icon" href="assets/favicon.ico" type="image/png">
+
+    <meta property="og:title" content="Célia Raizer - Currículo Online"/>
+    <meta property="og:descrition" content="Currículo profissional de Desenvolvedor Front-end, com experiência, habilidade e projetos" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/179221023?v=4" />
+
+    <!-- é uma meta tag usada para dar instruções aos robôs de 
+     mecanismos de busca (Google, Bing, etc.)
+    sobre como eles devem tratar sua página. -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Fonte do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+
+    <style>
+        :root{
+            --bg: #f6f8fb; /* Cor de fundo da página */
+            --card: #ffffff; /* Cor de fundo para cartões/caixas */
+            --muted: #6b7280; /* Cor para textos secundários */
+            --accent: #0ea5a4; /* Cor principal de destaque */
+            --accent-2: #0b7285; /* Segunda cor de destaque  */
+            --text: #0f172a; /* Cor principal do texto  */
+            --gap: 1rem; /* Espaçamento padrão entre elementos */
+        }
+
+        * {
+            box-sizing: border-box; /* Faz a largura e altura incluir padding e borda */
+            margin: 0;              /* Remove a margem padrão dos navegadores */
+            padding: 0;             /* Remove o espaçamento interno padrão */
+        }
+
+        body {
+            font-family: Inter, system-ui, sans-serif; /* Define a fonte principal da página */
+            background: var(--bg); /* Cor de fundo da página, usando a variável --bg */
+            color: var(--text); /* Cor do texto padrão, usando a variável --text */
+            padding: 1rem; /* Espaçamento interno nas bordas da página (~16px) */
+            display: flex; /* Transforma o body em um container flexbox */
+            justify-content: center; /* Alinha o conteúdo horizontalmente no centro */
+        }
+
+        .container {
+            max-width: 1200px; /* Largura máxima do container*/
+            background: var(--card); /* Cor de fundo do container */
+            border-radius: 12px; /* Bordas arredondadas do container */
+            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08); /* Sombra */
+            display: grid; /* Usa CSS Grid para organizar os elementos dentro do container */
+            grid-template-columns: 1fr 2fr; /* Define duas colunas: 
+            - primeira coluna ocupa 1 parte do espaço 
+            - segunda coluna ocupa 2 partes (2x maior que a primeira) */
+            overflow: hidden; /* Evita que o conteúdo “vaze” do container */
+        }
+
+
+       .sidebar {
+            background: linear-gradient(180deg, var(--accent), var(--accent-2)); /*Fundo */
+            color: white; /* Cor do texto e ícones da sidebar */
+            padding: 2rem; /* Espaçamento interno ao redor do conteúdo (~32px) */
+            display: flex; /* Transforma a sidebar em container flexível */
+            flex-direction: column; /* Organiza os elementos da sidebar em coluna (de cima para baixo) */
+            gap: var(--gap); /* Espaçamento padrão entre os elementos da sidebar (1rem) */
+        }
+
+
+        .sidebar > div:first-child {
+            display: flex; /* Transforma este div em um container flexível */
+            /* flex-direction: column; */ /* faria os elementos ficarem empilhados verticalmente */
+            align-items: center; /* Centraliza horizontalmente os itens dentro do div */
+            gap: var(--gap); /* Espaçamento entre os elementos (usando a variável --gap, 1rem) */
+        }
+
+        .photo {
+            width: 96px; /* Largura da imagem */
+            height: 96px; /* Altura da imagem */
+            border-radius: 12px; /* Bordas arredondadas da foto */
+            overflow: hidden; /*Garante que qualquer parte da imagem que ultrapasse os limites seja cortada */
+            border: 3px solid rgba(255, 255, 255, 0.15); /* Borda ao redor da foto para destaque */
+        }
+
+        .photo img {
+            width: 100%; /* Faz a imagem ocupar 100% da largura do container .photo */
+            height: 100%; /* Faz a imagem ocupar 100% da altura do container .photo */
+            object-fit: cover; /* Faz a imagem preencher o container cortando partes que ultrapassam,mantendo a proporção sem distorcer */
+        }
+
+        .contact a {
+            display: inline-flex; /* Transforma o link em um container flexível*/
+            align-items: center; /*Centraliza verticalmente os elementos dentro do link */
+            gap: 0.3rem; /*Espaço entre os itens dentro do link  */
+            color: rgba(255, 255, 255, 0.95);/* Cor do texto do link */
+            text-decoration: none;  /*Remove o sublinhado padrão dos links */
+        }
+
+        .skills { 
+            display: flex; /*container flexivel*/
+            flex-wrap: wrap; /*quebra linha*/
+            gap: 0.5rem; /*Cria um espaço (margem interna) entre os itens flexíveis.*/
+        }
+
+        .skill {
+            flex: 1 1 120px; /* flex-grow, flex-shrink, base width (define que cada habilidade ocupa pelo menos 120px)*/
+            background: #f3f6f8;
+            padding: 0.5rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: var(--text);
+        }
+
+        .progress {
+            height: 8px;
+            background: #e6eef0;
+            border-radius: 999px;
+            margin-top: 0.5rem;
+            overflow: hidden; /*Garante que nada dentro da barra (como o <span> que vai representar o preenchimento) ultrapasse os limites arredondados.*/
+        }
+
+        .progress > span {
+            display: block;
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        }
+
+        main{
+            padding: 2rem; /*espaço interno*/
+        }
+
+        .section{
+            margin-bottom: 1.25rem; /*adiciona espaço abaixo do elemento*/
+        } 
+
+        .section h2{
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .job{
+            border-left: 3px solid var(--accent); /*borda a esquerda do texto*/
+            padding: 0.6rem 0 0.6rem 0.8rem; /*espaco entre borda e texto*/
+            margin-bottom: 0.6rem;
+        }
+
+        .job time{
+            font-size: 0.85rem;
+            color: var(--muted)
+        }
+
+        .job p{
+            margin-top: 0.35rem;
+            color: var(--mutted);
+        }
+
+        .projects{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /*grid responsivo que se adapta ao tamanho da tela*/
+            gap: 0.75rem; /*espaçamento*/
+        }
+
+        .project {
+            background: #fbfdff;
+            border: 1px solid #eef4f6;
+            padding: 0.75rem;
+            border-radius: 8px;
+        }
+
+        footer {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-top: 1rem;
+        }
+
+    @media (max-width: 800px) { /*layout responsivo, para ajustar em varias telas*/
+        .container {
+            grid-template-columns: 1fr;
+        }
+
+        .sidebar {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 1.5rem;
+        }
+
+        main {
+            padding: 1.5rem;
+        }
+    }
+
+    @media (max-width: 500px) { /*layout responsivo, para ajustar em varias telas*/
+        body {
+            padding: 0.5rem;
+        }
+
+        .sidebar {
+            padding: 1rem;
+        }
+
+        main {
+            padding: 1rem;
+        }
+
+        .skills {
+            flex-direction: column;
+        }
+
+        .skill {
+            flex: 1 1 auto;
+        }
+    }
+
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+  <aside class="sidebar">
+    <div>
+        <div class="photo">
+            <img src="assets/img/Imagem do WhatsApp de 2025-08-18 à(s) 09.40.13_b5f1a2ad.jpg" alt="Foto do candidato">
+        </div>
+        <div>
+            <div class="title">Célia Raizer</div>
+            <div class="role">Desenvolvedora Front‑end Júnior</div>
+        </div>
+    </div>
+
+    <div class="contact">
+      <div class="pill">📍 Videira, SC</div>
+      <div style="margin-top:0.5rem">
+            <div><strong>Email:</strong> <a href="mailto:celiaslongoraizer@gmail.com">celiaslongoraizer@gmail.com</a></div>
+            <div><strong>Tel:</strong> <a href="tel:+5549933001500">+55 49 93300-1500</a></div>
+        <div class="social">
+            <a href="https://github.com/CeliaRaizer" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/c%C3%A9lia-cristina-raizer-303b81319/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+      </div>
+      </div>
+    </div>
+
+    <h3>Habilidades</h3>
+        <div class="skills">
+        <div class="skill">HTML
+            <div class="progress"><span style="width:35%"></span></div>
+        </div>
+        <div class="skill">CSS
+            <div class="progress"><span style="width:30%"></span></div>
+        </div>
+        <div class="skill">Java
+            <div class="progress"><span style="width:40%"></span></div>
+        </div>
+        <div class="skill">C
+            <div class="progress"><span style="width:60%"></span></div>
+        </div>
+        <div class="skill">MySQL
+            <div class="progress"><span style="width:75%"></span></div>
+        </div>
+        <div class="skill">PostgreSQL
+            <div class="progress"><span style="width:55%"></span></div>
+        </div>
+        </div>
+  </aside>
+
+  <main>
+    <!-- Resumo, experiência, projetos, formação, contato -->
+    <section class="section">
+        <h2 id="summary-title">Resumo</h2>
+        <div class="summary">
+            Desenvolvedora front‑end focado em construir interfaces acessíveis e responsivas...
+        </div>
+    </section> 
+
+    <section class="section">
+        <h2 id="experience-title">Experiência</h2>
+        <article class="job">
+            <h3>Estágio Auxiliar TI - Prefeitura Ibiam</h3>
+            <time datetime="2024-08 2025-07">Agosto 2024 — Julho 2025</time>
+            <p>Suporte ao setor de TI, auxiliando em atendimentos técnicos, visitas a setores municipais, controle de estoque e abertura de chamados internos e externos.</p>
+    </article>
+    </section>
+
+    <section class="section">
+        <h2 id="projects-title">Projetos Selecionados</h2>
+        <div class="projects">
+            <div class="project">
+                <strong>App de Tarefas (React)</strong>
+                <div class="muted">Lista de tarefas com filtro, persistência local e testes unitários.</div>
+            </div>
+            <!-- Mais projetos -->
+        </div>
+    </section>
+
+    <section class="section">
+    <h2 id="education-title">Formação</h2>
+    <div>
+      <strong>Bacharelado em Ciência da Computação — Instituto Federal Catarinense</strong>
+      <div class="muted">2024 — 2027</div>
+    </div>
+    </section>
+
+    <footer>
+        <div>Dísponivel para trabalho remoto e presencial</div>
+    </footer>
+
+  </main>
+</div>
+</body>
+</html>
